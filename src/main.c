@@ -123,9 +123,8 @@ int main()
 
   strcpy(
       final_output, 
-      "Write me an github readme.md file with the following information: "
+      "Write me an detailed github readme.md file based on the following information: "
   );
-  strcat(final_output, "\nproject title: ");
   strcat(final_output, project_title);
   strcat(final_output, "project dependencies: ");
   strcat(final_output, project_dependencies);
