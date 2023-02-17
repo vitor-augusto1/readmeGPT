@@ -34,8 +34,13 @@ void makeAPIrequest(char prompt[MAX_INPUT_SIZE * 5])
   return realsize;
 }
 
+char * return_api_key()
 {
-  
+  env_load(".", false);
+  char *api_key = getenv("API_KEY");
+  return api_key;
+}
+
 }
 
 
