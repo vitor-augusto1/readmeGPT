@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <curl/curl.h>
+#include <json-c/json.h>
+#include <dotenv.h>
 
 #define MAX_INPUT_SIZE 200
 
