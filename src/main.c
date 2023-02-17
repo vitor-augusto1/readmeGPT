@@ -10,3 +10,9 @@ void makeAPIrequest(char prompt[MAX_INPUT_SIZE * 5])
 {
   
 }
+
+
+int main()
+{
+  return 0;
+}
