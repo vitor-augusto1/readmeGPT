@@ -151,5 +151,10 @@ int main()
 
   // Get the generated text from the first choice
   struct json_object *choice = json_object_array_get_idx(choices, 0);
+  struct json_object *text;
+  json_object_object_get_ex(choice, "text", &text);
+  const char *generated_text = json_object_get_string(text);
+  printf("This is the json response ->> %s", generated_text);
+
   return 0;
 }
