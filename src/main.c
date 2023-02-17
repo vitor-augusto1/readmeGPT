@@ -144,5 +144,12 @@ int main()
     }
   }
 
+  // Parse the JSON response
+  struct json_object *root = json_tokener_parse(makeAPIrequest(final_output));
+  struct json_object *choices;
+  json_object_object_get_ex(root, "choices", &choices);
+
+  // Get the generated text from the first choice
+  struct json_object *choice = json_object_array_get_idx(choices, 0);
   return 0;
 }
