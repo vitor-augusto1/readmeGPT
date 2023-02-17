@@ -99,6 +99,9 @@ int main()
   char license_and_copyright_information[MAX_INPUT_SIZE];
   char final_output[MAX_INPUT_SIZE * 5];
 
+  printf("\nTell me a little bit about this project intentions: \n");
+  fgets(project_intentions, sizeof(project_intentions), stdin);
+
   printf("Project title: \n");
   fgets(project_title, sizeof(project_title), stdin);
 
