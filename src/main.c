@@ -26,6 +26,14 @@ static size_t cb(void *data, size_t size, size_t nmemb, void *clientp)
   }
 
 void makeAPIrequest(char prompt[MAX_INPUT_SIZE * 5])
+  mem->response = ptr;
+  memcpy(&(mem->response[mem->size]), data, realsize);
+  mem->size += realsize;
+  mem->response[mem->size] = 0;
+ 
+  return realsize;
+}
+
 {
   
 }
