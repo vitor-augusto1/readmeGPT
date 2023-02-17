@@ -1,3 +1,4 @@
+#include <json-c/json_object.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
