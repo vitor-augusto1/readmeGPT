@@ -9,6 +9,11 @@
 
 #define MAX_INPUT_SIZE 200
 
+struct memory {
+  char *response;
+  size_t size;
+};
+ 
 
 void makeAPIrequest(char prompt[MAX_INPUT_SIZE * 5])
 {
