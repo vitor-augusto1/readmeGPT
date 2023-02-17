@@ -40,5 +40,22 @@ int main()
       stdin
   );
 
+  strcpy(
+      final_output, 
+      "Write me an github readme.md file with the following information: "
+  );
+  strcat(final_output, "\nproject title: ");
+  strcat(final_output, project_title);
+  strcat(final_output, "project dependencies: ");
+  strcat(final_output, project_dependencies);
+  strcat(final_output, "project requirements: ");
+  strcat(final_output, project_requirements);
+  strcat(final_output, "usage examples: ");
+  strcat(final_output, usage_examples);
+  strcat(final_output, "project license and copyright: ");
+  strcat(final_output, license_and_copyright_information);
+
+  printf("\n%s", final_output);
+
   return 0;
 }
