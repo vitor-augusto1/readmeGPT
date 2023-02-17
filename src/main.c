@@ -14,6 +14,16 @@ struct memory {
   size_t size;
 };
  
+static size_t cb(void *data, size_t size, size_t nmemb, void *clientp)
+{
+  size_t realsize = size * nmemb;
+  struct memory *mem = (struct memory *)clientp;
+ 
+  char *ptr = realloc(mem->response, mem->size + realsize + 1);
+  if(ptr == NULL) {
+    printf("[ERROR]");
+    return 0;  /* out of memory! */
+  }
 
 void makeAPIrequest(char prompt[MAX_INPUT_SIZE * 5])
 {
