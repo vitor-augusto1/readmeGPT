@@ -25,7 +25,6 @@ static size_t cb(void *data, size_t size, size_t nmemb, void *clientp)
     return 0;  /* out of memory! */
   }
 
-void makeAPIrequest(char prompt[MAX_INPUT_SIZE * 5])
   mem->response = ptr;
   memcpy(&(mem->response[mem->size]), data, realsize);
   mem->size += realsize;
@@ -139,7 +138,11 @@ int main()
   strcat(final_output, "project license and copyright-> ");
   strcat(final_output, license_and_copyright_information);
 
-  printf("\n%s", final_output);
+  for (int i = 0; i < strlen(final_output); i++) {
+    if (final_output[i] == '\n') {
+      final_output[i] = ' ';
+    }
+  }
 
   return 0;
 }
