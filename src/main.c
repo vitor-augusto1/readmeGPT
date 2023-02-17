@@ -125,14 +125,18 @@ int main()
       final_output, 
       "Write me an detailed github readme.md file based on the following information: "
   );
+
+  strcat(final_output, "project intentions-> ");
+  strcat(final_output, project_intentions);
+  strcat(final_output, "project title-> ");
   strcat(final_output, project_title);
-  strcat(final_output, "project dependencies: ");
+  strcat(final_output, "project dependencies-> ");
   strcat(final_output, project_dependencies);
-  strcat(final_output, "project requirements: ");
+  strcat(final_output, "project requirements-> ");
   strcat(final_output, project_requirements);
-  strcat(final_output, "usage examples: ");
+  strcat(final_output, "usage examples-> ");
   strcat(final_output, usage_examples);
-  strcat(final_output, "project license and copyright: ");
+  strcat(final_output, "project license and copyright-> ");
   strcat(final_output, license_and_copyright_information);
 
   printf("\n%s", final_output);
