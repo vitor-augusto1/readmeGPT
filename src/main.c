@@ -162,7 +162,18 @@ int main()
   struct json_object *text;
   json_object_object_get_ex(choice, "text", &text);
   const char *generated_text = json_object_get_string(text);
-  printf("This is the json response ->> %s", generated_text);
+
+  puts("The readme.md file has been created in the current directory. feel free to change what you don't like.");
+  //printf("%s", generated_text);
+  FILE *file_pointer;
+  // string here
+  file_pointer = fopen("readme.md", "w");
+  if (file_pointer == NULL) {
+    printf("Error writing the file!\n");
+    return 1;
+  }
+  fprintf(file_pointer, "%s", generated_text);
+  fclose(file_pointer);
 
   return 0;
 }
