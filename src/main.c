@@ -99,20 +99,27 @@ int main()
   char license_and_copyright_information[MAX_INPUT_SIZE];
   char final_output[MAX_INPUT_SIZE * 5];
 
-  printf("\nTell me a little bit about this project intentions: \n");
+  printf("\nPlease, provide as much information as you can for a very detailed readme\n");
+  sleep(4);
+  printf("\nTell me a little bit about this project's functionalities: \n");
   fgets(project_intentions, sizeof(project_intentions), stdin);
+  sleep(1);
 
   printf("Project title: \n");
   fgets(project_title, sizeof(project_title), stdin);
+  sleep(1);
 
-  printf("About the project dependencies: \n");
+  printf("About the project dependencies (What you've used to create this project): \n");
   fgets(project_dependencies, sizeof(project_dependencies), stdin);
+  sleep(1);
 
-  printf("Project requirements: \n");
+  printf("Project requirements (what the user needs to run your project): \n");
   fgets(project_requirements, sizeof(project_requirements), stdin);
+  sleep(1);
 
-  printf("List some usage examples: \n");
+  printf("List some usage examples (what the user is gonna be able to do with your project): \n");
   fgets(usage_examples, sizeof(usage_examples), stdin);
+  sleep(1);
 
   printf("License and copyright information: \n");
   fgets(
