@@ -130,7 +130,7 @@ int main()
 
   strcpy(
       final_output, 
-      "Write me an detailed github readme.md file based on the following information: "
+      "Write me an detailed github readme.md file based on the following information and please feel free to add and custom the provided information: "
   );
 
   strcat(final_output, "project intentions-> ");
