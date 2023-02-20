@@ -81,8 +81,6 @@ int main()
     fprintf(file_pointer, "%s", generated_text);
     fclose(file_pointer);
   }
-  fprintf(file_pointer, "%s", generated_text);
-  fclose(file_pointer);
 
   return 0;
 }
