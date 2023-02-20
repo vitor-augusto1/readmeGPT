@@ -13,7 +13,7 @@ int main()
   char project_requirements[MAX_INPUT_SIZE];
   char usage_examples[MAX_INPUT_SIZE];
   char license_and_copyright_information[MAX_INPUT_SIZE];
-  char final_output[MAX_INPUT_SIZE * 5];
+  char final_output[MAX_INPUT_SIZE * 100];
 
   printf("\nPlease, provide as much information as you can for a very detailed readme\n");
   sleep(4);
