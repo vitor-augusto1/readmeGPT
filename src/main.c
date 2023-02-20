@@ -57,9 +57,8 @@ int main()
   strcat(final_output, license_and_copyright_information);
 
   for (int i = 0; i < strlen(final_output); i++) {
-    if (final_output[i] == '\n') {
+    if (final_output[i] == '\n')
       final_output[i] = ' ';
-    }
   }
 
   // Parse the JSON response
