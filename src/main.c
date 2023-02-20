@@ -62,24 +62,24 @@ int main()
   }
 
   // Parse the JSON response
-  struct json_object *root = json_tokener_parse(makeAPIrequest(final_output));
-  struct json_object *choices;
-  json_object_object_get_ex(root, "choices", &choices);
-
-  // Get the generated text from the first choice
-  struct json_object *choice = json_object_array_get_idx(choices, 0);
-  struct json_object *text;
-  json_object_object_get_ex(choice, "text", &text);
-  const char *generated_text = json_object_get_string(text);
-
-  puts("The readme.md file has been created in the current directory. feel free to change what you don't like.");
-  //printf("%s", generated_text);
-  FILE *file_pointer;
-  // string here
-  file_pointer = fopen("readme.md", "w");
-  if (file_pointer == NULL) {
-    printf("Error writing the file!\n");
-    return 1;
+  json_object *root = json_tokener_parse(makeAPIrequest(final_output));
+  json_object *choices;
+  if (json_object_object_get_ex(root, "choices", &choices)) {
+    // Get the generated text from the first choice
+    struct json_object *choice = json_object_array_get_idx(choices, 0);
+    struct json_object *text;
+    json_object_object_get_ex(choice, "text", &text);
+    const char *generated_text = json_object_get_string(text);
+    //printf("%s", generated_text);
+    FILE *file_pointer;
+    // string here
+    file_pointer = fopen("readme.md", "w");
+    if (file_pointer == NULL) {
+      printf("Error writing the file!\n");
+      return 1;
+    }
+    fprintf(file_pointer, "%s", generated_text);
+    fclose(file_pointer);
   }
   fprintf(file_pointer, "%s", generated_text);
   fclose(file_pointer);
