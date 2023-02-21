@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
   char ch;
-  char file_name[100];
+  char file_name[100] = "readme.md";
   while ((ch = getopt(argc, argv, "f:")) != EOF) {
     switch (ch) {
       case 'f':
@@ -24,8 +24,6 @@ int main(int argc, char *argv[])
           "Unknown option: '%s'\nWriting it in the current directory.\n",
           optarg
         );
-        strcpy(file_name, "readme.md");
-        break;
     }
   }
   argc -= optind;
