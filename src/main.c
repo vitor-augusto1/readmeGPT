@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include "includes/request.h"
 
+void remove_new_lines(char *string_pointer);
+
 int main()
 {
   char project_title[100];
@@ -60,6 +62,7 @@ int main()
     if (final_output[i] == '\n')
       final_output[i] = ' ';
   }
+  remove_new_lines(final_output);
 
   // Parse the JSON response
   json_object *root = json_tokener_parse(makeAPIrequest(final_output));
@@ -83,4 +86,12 @@ int main()
   }
 
   return 0;
+}
+
+void remove_new_lines(char *string_pointer)
+{
+  for (int i = 0; i < strlen(string_pointer); i++){
+    if (string_pointer[i] == '\n')
+      string_pointer[i] = ' ';
+  }
 }
