@@ -33,19 +33,12 @@ int main(int argc, char *argv[])
   generate_user_final_input(user_project_information);
   char *api_response = makeAPIrequest(user_project_information);
   const char *generated_text = extract_the_text_from_api_response_json(
-    api_response
-  );
+      api_response
+      );
   if (generated_text == NULL) {
     printf("Error generating the markdown, please try again.");
     return 1;
   }
-  FILE *file_pointer;
-  file_pointer = fopen("readme.md", "w");
-  if (file_pointer == NULL) {
-    printf("Error writing the file!\n");
-    return 1;
-  }
-  fprintf(file_pointer, "%s", generated_text);
-  fclose(file_pointer);
+  write_to_a_file(generated_text, file_name);
   return 0;
 }
