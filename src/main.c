@@ -10,6 +10,25 @@
 
 int main(int argc, char *argv[])
 {
+  char ch;
+  char file_name[100];
+  while ((ch = getopt(argc, argv, "f:")) != EOF) {
+    switch (ch) {
+      case 'f':
+        strcpy(file_name, optarg);
+        break;
+      default:
+        fprintf(
+          stderr,
+          "Unknown option: '%s'\nWriting it in the current directory.\n",
+          optarg
+        );
+        strcpy(file_name, "readme.md");
+        break;
+    }
+  }
+  argc -= optind;
+  argv += optind;
   char user_project_information[MAX_INPUT_SIZE * 200]; 
   generate_user_final_input(user_project_information);
   char *api_response = makeAPIrequest(user_project_information);
