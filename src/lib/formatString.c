@@ -1,4 +1,4 @@
-#include "../includes/request.h"
+#include "../includes/formatString.h"
 
 void remove_new_lines(char *string_pointer)
 {
