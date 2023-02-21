@@ -44,7 +44,12 @@ char * makeAPIrequest(char prompt[MAX_INPUT_SIZE * 5])
     headers = curl_slist_append(headers, api_key_to_send);
     char *url = "https://api.openai.com/v1/completions";
     char *data = malloc(strlen(prompt) + 200);
-    sprintf(data, "{\"model\": \"text-davinci-003\", \"prompt\": \"%s\", \"temperature\": 1.0, \"max_tokens\": 2048, \"top_p\": 1, \"frequency_penalty\": 1, \"presence_penalty\": 0}", prompt);
+    sprintf(data,
+        "{\"model\": \"text-davinci-003\", \"prompt\": \"%s\",\
+        \"temperature\": 1.0, \"max_tokens\": 2048, \"top_p\": 1,\
+        \"frequency_penalty\": 1, \"presence_penalty\": 0}", 
+        prompt
+    );
     curl_easy_setopt(curl, CURLOPT_URL, url);
     curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
     curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);
