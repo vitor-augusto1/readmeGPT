@@ -7,6 +7,7 @@
 #include "includes/formatString.h"
 #include "includes/generateFinalInput.h"
 #include "includes/parseJSON.h"
+#include "includes/writeTofile.h"
 
 int main(int argc, char *argv[])
 {
