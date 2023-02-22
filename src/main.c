@@ -8,6 +8,7 @@
 #include "includes/generateFinalInput.h"
 #include "includes/parseJSON.h"
 #include "includes/writeTofile.h"
+#include "includes/userguide.h"
 
 int main(int argc, char *argv[])
 {
