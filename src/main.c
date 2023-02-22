@@ -37,6 +37,8 @@ int main(int argc, char *argv[])
   argv += optind;
   char user_project_information[MAX_INPUT_SIZE * 200]; 
   generate_user_final_input(user_project_information);
+  clear_user_terminal();
+  puts("\nGenerating the markdown...\n");
   char *api_response = makeAPIrequest(user_project_information);
   const char *generated_text = extract_the_text_from_api_response_json(
       api_response
@@ -46,5 +48,9 @@ int main(int argc, char *argv[])
     return 1;
   }
   write_to_a_file(generated_text, file_name);
+  clear_user_terminal();
+  printf("The file was created at: %s\n\n", file_name);
+  puts("Please, feel free to change any thing wrong in the file.\n");
+  puts("Thanks for using readmeGPT :)");
   return 0;
 }
