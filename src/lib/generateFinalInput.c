@@ -13,19 +13,19 @@ void generate_user_final_input(char *final_output)
   char user_guide[MAX_INPUT_SIZE];
   char license_and_copyright_information[MAX_INPUT_SIZE];
 
-  printf("Project title:\n");
+  printf("\nProject title:\n> ");
   fgets(project_title, sizeof(project_title), stdin);
-  printf("\nProject description (Your goal with this project and what do you used to create it):\n");
+  printf("\nProject description (Your goal with this project and what do you used to create it):\n> ");
   fgets(project_intentions, sizeof(project_intentions), stdin);
-  printf("Installation (How the user can install your project):\n");
+  printf("\nInstallation (How the user can install your project):\n> ");
   fgets(user_guide, sizeof(user_guide), stdin);
-  printf("Project usage (step by step to run your project):\n");
+  printf("\nProject usage (step by step to run your project):\n> ");
   fgets(usage_examples, sizeof(usage_examples), stdin);
-  printf("project dependencies:\n");
+  printf("\nproject dependencies:\n> ");
   fgets(project_dependencies, sizeof(project_dependencies), stdin);
-  printf("Project requirements (tell the user what he needs to do in order to run your project without any error):\n");
+  printf("\nProject requirements (tell the user what he needs to do in order to run your project without any error):\n> ");
   fgets(project_requirements, sizeof(project_requirements), stdin);
-  printf("License and copyright information: \n");
+  printf("\nLicense and copyright information: \n> ");
   fgets(
       license_and_copyright_information,
       sizeof(license_and_copyright_information),
