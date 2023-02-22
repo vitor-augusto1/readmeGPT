@@ -19,6 +19,9 @@ int main(int argc, char *argv[])
       case 'f':
         strcpy(file_name, optarg);
         break;
+      case '?':
+        show_user_guide();
+        break;
       default:
         fprintf(
           stderr,
