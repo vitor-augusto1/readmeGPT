@@ -9,3 +9,8 @@ void show_user_guide()
   puts("\t\t-h\tDisplays help with available flag, subcommand, and positional value parameters");
   exit(1);
 }
+
+void clear_user_terminal()
+{
+  printf("\e[1;1H\e[2J");
+}
