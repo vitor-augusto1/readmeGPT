@@ -1,6 +1,7 @@
 #include <json-c/json_object.h>
 #include <json-c/json.h>
 #include <json-c/json_tokener.h>
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include "includes/request.h"
@@ -18,6 +19,8 @@ int main(int argc, char *argv[])
     switch (ch) {
       case 'f':
         strcpy(file_name, optarg);
+        remove_duplicate_slash(file_name);
+        strcat(file_name, "readme.md");
         break;
       case '?':
         show_user_guide();
