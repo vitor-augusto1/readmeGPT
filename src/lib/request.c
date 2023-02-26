@@ -1,4 +1,5 @@
 #include "../includes/request.h"
+#include <curl/curl.h>
 
 struct memory {
   char *response;
@@ -62,6 +63,7 @@ char * makeAPIrequest(char prompt[MAX_INPUT_SIZE * 5])
     /* remember to free the buffer */
     free(chunk.response);
     curl_easy_cleanup(curl);
+    curl_slist_free_all(headers);
     free(data);
   }
   free(api_key_to_send);

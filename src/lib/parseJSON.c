@@ -11,6 +11,7 @@ const char* extract_the_text_from_api_response_json(char *text_to_parse)
     struct json_object *text;
     json_object_object_get_ex(choice, "text", &text);
     extracted_text = json_object_get_string(text);
+    json_object_put(root);
     return extracted_text;
   }
   return NULL;
