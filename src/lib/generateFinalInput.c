@@ -15,7 +15,7 @@ void generate_user_final_input(char *final_output)
 
   printf("\nProject title:\n> ");
   fgets(project_title, sizeof(project_title), stdin);
-  printf("\nProject description (Your goal with this project and what do you used to create it):\n> ");
+  printf("\nProject description (Your goal with this project and what did you used to create it):\n> ");
   fgets(project_intentions, sizeof(project_intentions), stdin);
   printf("\nInstallation (How the user can install your project):\n> ");
   fgets(user_guide, sizeof(user_guide), stdin);
