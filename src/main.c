@@ -15,13 +15,13 @@
 int main(int argc, char *argv[])
 {
   char ch;
-  char file_name[100] = "readme.md";
+  char file_name[100] = "README.md";
   while ((ch = getopt(argc, argv, "f:")) != EOF) {
     switch (ch) {
       case 'f':
         strcpy(file_name, optarg);
         remove_duplicate_slash(file_name);
-        strcat(file_name, "readme.md");
+        strcat(file_name, "README.md");
         break;
       case 'h':
         show_user_guide();
