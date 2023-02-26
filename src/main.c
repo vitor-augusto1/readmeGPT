@@ -1,3 +1,4 @@
+#include <getopt.h>
 #include <json-c/json_object.h>
 #include <json-c/json.h>
 #include <json-c/json_tokener.h>
