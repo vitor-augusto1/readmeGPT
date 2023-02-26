@@ -2,8 +2,6 @@
 
 ![robot](https://user-images.githubusercontent.com/121441594/220617203-9a5827f3-9968-41f7-ad50-7e9a1fb04686.png)
 
-Copyright (c) [2023] [Your name here]
-
 # readmeGPT
 
 readmeGPT is a tool meant to help developers create github README.md files using AI technology. It's been developed using the C programming language with the openAI API. 
