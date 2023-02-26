@@ -22,6 +22,9 @@ int main(int argc, char *argv[])
         remove_duplicate_slash(file_name);
         strcat(file_name, "readme.md");
         break;
+      case 'h':
+        show_user_guide();
+        break;
       case '?':
         show_user_guide();
         break;
